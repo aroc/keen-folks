@@ -1,9 +1,9 @@
 var React = require('react');
 var Router = require('react-router');
 var RouteHandler = Router.RouteHandler;
-var Loader = require('./common/loader.js');
+var Loader = require('./common/Loader.react.js');
 
-var App = React.createClass({
+var AppComponent = React.createClass({
 
 	getInitialState: function() {
 		return {
@@ -15,11 +15,7 @@ var App = React.createClass({
     return (
     	<div id="keen-folks">
 	      <div className="container">
-	      	<div className="row">
-	      		<div className="twelve columns">
-	      			<RouteHandler {...this.props}/>
-	      		</div>
-	      	</div>
+	      	<RouteHandler {...this.props}/>
 	      </div>
       </div>
     );
@@ -27,4 +23,4 @@ var App = React.createClass({
 
 });
 
-module.exports = App;
+module.exports = AppComponent;

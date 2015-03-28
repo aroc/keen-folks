@@ -5,8 +5,8 @@ var Router = require('react-router');
 var DefaultRoute = Router.DefaultRoute;
 var Route = Router.Route;
 var RouteHandler = Router.RouteHandler;
-var AppComponent = require('./components/app.js');
-var UserList = require('./components/user_list/user_list.js');
+var AppComponent = require('./components/App.react.js');
+var UserList = require('./components/user_list/UserList.react.js');
 
 function App(config) {
   this.targetNode = document.getElementById(config.targetId);
