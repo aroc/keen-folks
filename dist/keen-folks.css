@@ -867,6 +867,9 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+#keen-folks .container {
+  max-width: 1200px;
+}
 #keen-folks .loader {
   position: absolute;
   top: 0;
