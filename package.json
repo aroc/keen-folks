@@ -4,6 +4,7 @@
   "private": true,
   "bucket-name": "keen-js",
   "dependencies": {
+    "keen-js": "3.2.4",
     "lodash": "3.2.0",
     "string": "^2.0.1",
     "stringify": "~3.0.0",
@@ -18,7 +19,6 @@
   },
   "browserify": {
     "transform": [
-      "browserify-shim",
       "reactify"
     ]
   },

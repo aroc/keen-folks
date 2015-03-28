@@ -10,6 +10,7 @@ var connect = require('gulp-connect');
 var browserify = require('browserify');
 var stringify = require('stringify');
 var source = require('vinyl-source-stream');
+var historyApiFallback = require('connect-history-api-fallback');
 var mochaPhantomJS = require('gulp-mocha-phantomjs');
 
 // **********************
@@ -27,15 +28,15 @@ gulp.task('build-scripts', function() {
     .transform(stringify(['.html']))
     .bundle()
     //Pass desired output filename to vinyl-source-stream
-    .pipe(source('keen-data-tools.js'))
+    .pipe(source('keen-folks.js'))
     // Start piping stream to tasks!
     .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('minify-scripts', function(){
-  return gulp.src('./dist/keen-data-tools.js')
+  return gulp.src('./dist/keen-folks.js')
     .pipe(uglify())
-    .pipe(rename('keen-data-tools.min.js'))
+    .pipe(rename('keen-folks.min.js'))
     .pipe(gulp.dest('./dist/'));
 });
 
@@ -45,17 +46,17 @@ gulp.task('minify-scripts', function(){
 gulp.task('build-styles', function(){
   return gulp.src('./client/styles/base.less')
     .pipe(less())
-    .pipe(rename('keen-data-tools.css'))
+    .pipe(rename('keen-folks.css'))
     .pipe(prefix())
     .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('minify-styles', function(){
-  return gulp.src('./dist/keen-data-tools.css')
+  return gulp.src('./dist/keen-folks.css')
     .pipe(minifycss({
       keepSpecialComments: 0
     }))
-    .pipe(rename('keen-data-tools.min.css'))
+    .pipe(rename('keen-folks.min.css'))
     .pipe(gulp.dest('./dist'));
 });
 

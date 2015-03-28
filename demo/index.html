@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keen.io Data Tools</title>
+  <link rel="stylesheet" href="/dist/keen-folks.css">
+  <script src="/dist/keen-folks.js"></script>
+</head>
+<body>
+  <div id="folks-app"></div>
+  <script type="text/javascript">
+    var app = new KeenFolks({
+      keenConfig: {
+        projectId: 'X',
+        readKey: 'X'
+      },
+      targetId: 'folks-app'
+    });
+    app.render();
+  </script>
+</body>
+</html>
